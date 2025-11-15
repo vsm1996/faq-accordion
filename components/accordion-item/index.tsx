@@ -26,16 +26,21 @@ const AccordionItem = ({
         !isLast && `border-b-1 border-purple-100`
       } pb-300`}
     >
-      <div className="w-full h-full flex items-center justify-between">
-        <h2 className="text-2">{question}</h2>
-        <button type="button" onClick={() => setOpen(!isOpen)}>
+      <div className="w-full h-full flex items-center justify-between group">
+        <h2 className="text-2 text-purple-950 group-hover:text-violet">
+          {question}
+        </h2>
+        <button
+          type="button"
+          className="cursor-pointer relative w-[30px] h-[30px] flex-shrink-0"
+          onClick={() => setOpen(!isOpen)}
+        >
           <Image
             alt={
               isOpen ? "close accordion item icon" : "open accordion item icon"
             }
             src={isOpen ? IconMinus : IconPlus}
-            width={30}
-            height={30}
+            fill
           />
         </button>
       </div>
@@ -45,7 +50,7 @@ const AccordionItem = ({
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <p>{answer}</p>
+        <p className="text-purple-600">{answer}</p>
       </div>
     </div>
   );

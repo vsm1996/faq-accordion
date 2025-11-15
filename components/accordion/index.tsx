@@ -28,7 +28,7 @@ const faqData = [
 
 const Accordion = () => {
   return (
-    <div className="z-10 bg-white p-300 rounded-lg">
+    <div className="md:max-w-[600px] z-10 bg-white p-300 rounded-lg">
       <div className="flex items-center gap-300 mb-300">
         <Image src={StarIcon} alt="star icon" width={24} height={24} />
         <h1 className="title text-purple-950">FAQs</h1>
